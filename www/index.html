@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CentiMark Roofing Solution</title>
+    <style>
+        html, body, body > div, #container, #container-uiarea {
+            height: 100%;
+        }
+    </style>
+    <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" data-sap-ui-theme="sap_fiori_3" data-sap-ui-resourceroots="{
+            &quot;poc.centi.mark.centimarkui&quot;: &quot;./&quot;
+        }" data-sap-ui-compatversion="edge" data-sap-ui-async="false" data-sap-ui-frameoptions="trusted"></script>
+    <script id="locate-reuse-libs" src="./utils/locate-reuse-libs.js" data-sap-ui-manifest-uri="./manifest.json" data-sap-ui-componentname="poc.centi.mark.centimarkui">
+    </script> 
+    <script type="text/javascript" src="cordova.js"></script>
+    <script>
+        var sqliteDB;
+        window.onload = function() {
+        sap.ui.require(["poc/centi/mark/centimarkui/offline/offapp"], function (offapp) {
+                    //To run it on mobile
+                    if (window.cordova) {						
+                        offapp.initialize();
+                        //alert('offline data intialized');
+                    }
+                    else //To run it on browser
+                    {
+                        offapp.onStartComponent();
+                    } 
+                })
+            }
+
+    </script>
+</head>
+<body class="sapUiBody sapUiSizeCompact" id="content">
+    <div data-sap-ui-component data-name="poc.centi.mark.centimarkui" data-id="container" data-settings="{&quot;id&quot; : &quot;poc.centi.mark.centimarkui&quot;}" data-handle-validation="true"></div>
+</body>
+</html>

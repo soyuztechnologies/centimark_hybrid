@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(t){"use strict";return t.extend("poc.centi.mark.centimarkui.controller.App",{onInit:function(){this.oRouter=this.oRouter=this.getOwnerComponent().getRouter()},onLogin:function(){this.oRouter.navTo("NoticeView")}})});

@@ -1,0 +1,36 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:form = "sap.ui.layout.form"
+>
+<Dialog title="Create New Notification">
+
+<form:SimpleForm  >
+
+     <!-- <Label text="Notification Number" design="Bold" />
+     <Input value="{local>/Not_Num}"/> -->
+
+     <Label text="Username" design="Bold"/>
+     <Input value="{local>USERNAME}"/>
+
+     <Label text="Customer" design="Bold"/>
+     <Input value="{local>CUSTOMER}"/>
+
+     <Label text="Description" design="Bold"/>
+     <Input value="{local>DESCRIPTION}"/>
+
+     <Label text="Job Type" design="Bold"/>
+     <Select id="idJob" selectedKey="{local>JOB_TYPE}">
+        <c:Item text="Maintenence" key="Maintenence"></c:Item>
+        <c:Item text="Repairing" key="Repairing"></c:Item>
+    </Select>
+
+</form:SimpleForm>
+<beginButton>
+    <Button text="Cancel"  press="onCancelNotif" type="Reject"/>
+</beginButton>
+<endButton>
+    <Button type="Emphasized" text="Create" press="onClickCreate"/>
+</endButton>
+</Dialog>
+</c:FragmentDefinition>
