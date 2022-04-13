@@ -3,9 +3,9 @@ sap.ui.define([
 	"sap/ui/core/ComponentContainer",
 	"sap/m/BusyDialog",
 	"sap/m/MessageBox",
-	"sap/ui/thirdparty/datajs"
-
-], function(Shell, ComponentContainer, BusyDialog, MessageBox) {
+	"sap/ui/thirdparty/datajs",
+	"firebase/auth/cordova"
+], function(Shell, ComponentContainer, BusyDialog, MessageBox, GoogleAuthProvider) {
 	"use strict";
 
 	return {
@@ -21,6 +21,10 @@ sap.ui.define([
 			
 			this.onCreateLocalDB();
 
+			//import { GoogleAuthProvider } from "firebase/auth/cordova";
+
+			const provider = new GoogleAuthProvider();
+			console.log(provider);
 		},
 
 		//DB Creation

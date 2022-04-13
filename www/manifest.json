@@ -9,7 +9,18 @@
     },
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
-    "resources": "resources.json"
+    "resources": "resources.json",
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZCENTI_ODATA_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -52,6 +63,11 @@
         "settings": {
           "bundleName": "poc.centi.mark.centimarkui.i18n.i18n"
         }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
       },
       "local": {
         "type": "sap.ui.model.json.JSONModel",

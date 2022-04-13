@@ -23,7 +23,20 @@
       "ios"
     ],
     "plugins": {
-      "cordova-sqlite-storage": {}
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-buildinfo": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "com.anubhavtrainings.centimark",
+        "ANDROID_SCHEME": " ",
+        "ANDROID_HOST": " ",
+        "ANDROID_PATHPREFIX": "/"
+      }
     }
+  },
+  "dependencies": {
+    "cordova-plugin-buildinfo": "4.0.0",
+    "cordova-plugin-customurlscheme": "5.0.2",
+    "cordova-universal-links-plugin-fix": "1.2.1",
+    "firebase": "^9.6.10"
   }
 }

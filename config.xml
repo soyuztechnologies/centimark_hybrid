@@ -8,4 +8,10 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <universal-links>
+        <host name="com.anubhavtrainings.centimark" scheme="https" />
+        <host name="centimark-9a482.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback"/>
+        </host>
+    </universal-links>
 </widget>
